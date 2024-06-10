@@ -1,0 +1,227 @@
+@charset "utf-8";
+*{margin: 0px; padding: 0px; box-sizing: border-box; }
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+#wrap{
+    width: 100%; position: relative;
+}
+
+#popupBg{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9;
+}
+#popupBg #popup{
+    width: 420px; background-color: #fff;
+    border: 1px solid #e9e9e9;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+    border-radius: 13px; z-index: 10;
+}
+#popupBg #popup h2{
+    font: bold 18px/1 "맑은 고딕"; color: #333;
+    padding: 18px 20px; border-bottom: 1px solid #e9e9e9;
+}
+#popupBg #popup span{
+    display: block; 
+    font-family: "맑은 고딕";
+}
+#popupBg #popup .bold{
+    font-weight: bold; padding: 10px 15px 5px;
+}
+#popupBg #popup .nomal{
+    padding: 0px 15px; margin: 0 auto;
+}
+#popupBg #popup button{
+    display: block; background-color: #002d57; color: #fff;
+    margin: 10px auto; padding: 10px 15px; border-radius: 10px;
+    width: 95%; cursor: pointer;
+    font: bold 13px/1 "맑은 고딕";
+}
+
+.container{
+    width: 100%; height: 650px;
+    display: flex; position: relative;
+}
+.container header{
+    width: 200px; height: 100%;
+}
+.container header h1{
+    width: 100%; height: 180px;
+    display: flex; justify-content: center; align-items: center;
+}
+.container header h1 a{
+    display: block; max-width: 100px;
+}
+.container header h1 a img{
+    width: 100%;
+}
+.container header #gnb{
+    width: 85%; margin: 0 auto; border-radius: 10px;
+    box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.1);
+}
+.container header #gnb >li >a{
+    display: block; width: 100%; text-align: center;
+    padding: 12px 0px; font: bold 16px/1 "맑은 고딕";
+    color: #333;
+}
+.container header #gnb li:hover >a{
+    background-color: #002d57; color: #fff;
+}
+.container header #gnb li .sub{
+    width: 100%; 
+    display: none;
+}
+.container header #gnb li .sub>li>a{
+    display: block; text-align: center; width: 100%;
+    padding: 10px 0px; font: normal 15px/1 "맑은 고딕"; color: #666;
+}
+.container header #gnb li .sub>li>a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+.container main{
+    width: calc(100% - 200px); height: 100%; position: relative;
+}
+.container main #contentBox{
+    width: 100%; height: 400px; padding: 20px 30px 20px 10px;
+    display: flex;
+}
+.container main #contentBox #slide{
+    width: calc(100% - 230px); height: 100%;
+    border-radius: 15px 0px 0px 15px; 
+    overflow: hidden;
+}
+.container main #contentBox #slide .frame{
+    width: 300%; height: 100%; position: relative; display: flex;
+}
+.container main #contentBox #slide .frame li{
+    width: calc(100% / 3); height: 100%;
+}
+.container main #contentBox #slide .frame li img{
+    width: 100%; height: 400px; object-fit: cover;
+}
+.container main #contentBox #banner{
+    width: 230px; height: 100%;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    margin-left: 10px;
+    border-radius: 0 15px 15px 0;
+
+}
+.container main #contentBox #banner a{
+    display: block; width: 100%; height: 100%; position: relative;
+}
+.container main #contentBox #banner a span{
+    display: block;
+}
+.container main #contentBox #banner a span:nth-child(1){
+    font: bold 19px/1 "맑은 고딕"; color: #fff;
+    position: absolute; top: 35px; left: 20px;
+}
+.container main #contentBox #banner a span:nth-child(2){
+    font: normal 12px/1.3 "맑은 고딕"; color: #fff;
+    opacity: 0.8; position: absolute; top: 60px; left: 20px;
+}
+.container main #contentBox #banner a p{
+    width: 30px; height: 30px; border-right: 10px solid #eee;
+    border-bottom: 10px solid #eee;
+    transform: rotate(-45deg);
+    position: absolute; bottom: 20px; right: 20px;
+}
+.container main #NGboard{
+    width: 100%; height: 250px;
+    padding: 0px 30px 40px 20px; display: flex; gap: 50px;
+}
+.container main #NGboard article{
+    flex: 1;
+}
+.container main #NGboard article .name a{
+    display: block; width: 140px; padding: 15px 0px;
+    font: bold 16px/1 "맑은 고딕"; color: #333;
+    text-align: center; 
+    border-radius: 20px 20px 0px 0px;
+    border: 2px solid #ddd; border-bottom: none;
+}
+.container main #NGboard article .content{
+    width: 100%; height: calc(100% - 35px);
+    border: 2px solid #ddd; 
+    border-radius: 0px 15px 15px 15px;
+}
+
+.container main #NGboard #gallery .content{
+    display: flex; justify-content: space-evenly; align-items: center;
+}
+.container main #NGboard #gallery .content a{
+    display: block; width: 140px; height: 120px;
+}
+.container main #NGboard #gallery .content a img{
+    width: 100%; height: 90px; border-radius: 10px;
+}
+.container main #NGboard #gallery .content a span{
+    display: block; text-align: center; 
+    font: 400 16px/1 "맑은 고딕"; color: #666;
+    margin-top: 20px;
+}
+
+.container main #NGboard #notice ul{
+    width: 100%; height: 100%;
+}
+.container main #NGboard #notice ul li{
+    width: 100%; 
+    display: flex; padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+.container main #NGboard #notice ul li:last-child{
+    border-bottom:none;
+}
+.container main #NGboard #notice ul li a{
+    font: normal 16px/1 "맑은 고딕"; color: #333;
+}
+.container main #NGboard #notice ul li span{
+    font: normal 16px/1 "arial"; color: #666;
+}
+.container main #NGboard #notice ul li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+footer{
+    width: 100%; height: 100px;
+    border-top: 2px solid #ddd;
+    display: flex;
+}
+footer h2{
+    width: 200px; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+footer h2 a{
+    display: block; max-width: 70px;
+}
+footer h2 a img{
+    width: 100%;
+}
+footer .copyright{
+    width: calc(100% - 430px);
+    height: 100%; display: flex;
+    flex-direction: column; justify-content: center; align-items: center;
+}
+footer .copyright span{font: normal 15px/1.5 "맑은 고딕"; color: #333;}
+
+footer .familySite{
+    width: 230px; height: 100%; display: flex;
+    justify-content: center; align-items: center;
+}
+footer .familySite select{
+    width: 85%;
+    margin: 0 auto;
+    padding: 5px 10px; 
+    border: 1px solid #ddd;
+    font: bold 14px/1 "맑은 고딕"; color: #333;
+    outline: none;
+}
